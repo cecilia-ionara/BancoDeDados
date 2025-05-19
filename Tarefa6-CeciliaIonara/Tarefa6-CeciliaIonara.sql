@@ -123,6 +123,6 @@ WHERE c.idChip = a.idChip;
 
 
 -- COMO FAZER PARA IDENTIFICAR O ANIMAL AO SEU CHIP E ADICIONANDO O TUTOR(usando produto cartesiano)
-SELECT * FROM Chip c, Animal a, Tutor t
+SELECT a.nome, t.nome, c.idChip FROM Chip c, Animal a, Tutor t
 WHERE c.idChip = a.idChip AND 
 	  t.idTutor = a.idTutor;
