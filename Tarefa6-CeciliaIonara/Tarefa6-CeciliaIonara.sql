@@ -116,3 +116,12 @@ colunas presentes no resultado são códigoChip e dataAplicacao.
 SELECT codigoChip, dataAplicacao FROM Chip
 WHERE dataAplicacao BETWEEN '2010-10-12' AND '2021-11-02'
 ORDER BY codigoChip;
+
+-- COMO FAZER PARA IDENTIFICAR O ANIMAL AO SEU CHIP (usando produto cartesiano)
+SELECT * FROM Chip c, Animal a
+WHERE c.idChip = a.idChip;
+
+
+-- COMO FAZER PARA IDENTIFICAR O ANIMAL AO SEU CHIP E ADICIONANDO O TUTOR(usando produto cartesiano)
+SELECT * FROM Chip c, Animal a, Tutor t
+WHERE c.idChip = a.idChip;
