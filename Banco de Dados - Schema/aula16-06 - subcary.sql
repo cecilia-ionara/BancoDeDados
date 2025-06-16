@@ -50,8 +50,16 @@ FROM Funcionario
 WHERE salario = (SELECT MAX(Salario)
 				FROM Funcionario);
 
+-- ALGUM ( ANY )
 SELECT nomeFunc, funcao, salario
 FROM Funcionario 
 WHERE salario > ANY (SELECT salario 
+					 FROM Funcionario 
+                     WHERE funcao = 'Supervisor');
+                     
+-- TODOS (ALL)
+SELECT nomeFunc, funcao, salario
+FROM Funcionario 
+WHERE salario > ALL (SELECT salario 
 					 FROM Funcionario 
                      WHERE funcao = 'Supervisor');
