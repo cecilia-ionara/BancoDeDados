@@ -75,8 +75,6 @@ SELECT a.nome, a.sobrenome,
 FROM Aluno a
 LEFT JOIN Aluno_Disciplina ad 
 	ON a.matriculaAluno = ad.matriculaAluno
-LEFT JOIN Disciplina d 
-	ON d.idDisciplina = ad.idDisciplina
 GROUP BY 
     a.nome, a.sobrenome;
     
