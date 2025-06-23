@@ -62,6 +62,9 @@ WHERE (
         )
     )
 ORDER BY c.nomeCurso;
+-- professor fez com dois select usando inner join 
+-- corrigir para que filtre a maior nota de engenha e maior nota de sistemas, do jeito que eu fiz pega apenas a maior dos dois 
+
 
 /*Questão 04: Todos alunos já cursaram disciplinas? Escreva uma consulta que retorne
 uma lista de alunos, com o total de disciplinas que cada um cursou e a nota média obtida
